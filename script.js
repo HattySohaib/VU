@@ -14,7 +14,7 @@ document
     // Check credentials
     if (username === validUsername && password === validPassword) {
       // Redirect on successful login
-      window.location.href = "result.html";
+      window.location.href = "./result.html";
     } else {
       alert("Invalid username or password");
     }
