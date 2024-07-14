@@ -7,7 +7,6 @@
     <title>Varendra University</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
     <link rel="stylesheet" href="http://202.5.52.152:8081/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -35,6 +34,9 @@
     <script src="http://202.5.52.152:8081/assets/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="http://202.5.52.152:8081/assets/dist/js/jquery.1.11.1.min.js"></script>
     <script src="http://202.5.52.152:8081/assets/dist/js/jquery-ui.min.js"></script>
+
+
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -61,7 +63,7 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
 
-                        <li><a href="/result.html"><i class="fa fa-sign-out"></i> Sign out</a>
+                        <li><a href="http://202.5.52.152:8081/login/logout"><i class="fa fa-sign-out"></i> Sign out</a>
                         </li>
                         <!-- Tasks Menu -->
 
@@ -116,6 +118,7 @@
                     </div>
                 </div>
 
+                <!-- Sidebar Menu -->
                 <ul data-widget="tree" class="sidebar-menu tree">
                     <li class="header">Main Navigation</li>
                     <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
@@ -123,7 +126,7 @@
                                 Card</span></a></li>
                     <li><a href="/payment.html"><i class="fa fa-money"></i>
                             <span>Payment History</span></a></li>
-                    <li><a href="result.html"><i class="fa fa-archive"></i>
+                    <li><a href="/result.html"><i class="fa fa-archive"></i>
                             <span>Results</span></a></li>
                     <li><a href="#"><i class="fa fa-archive"></i>
                             <span>Waiver Application</span></a></li>
@@ -153,147 +156,127 @@
 
         <div class="content-wrapper" style="min-height: 608px;">
             <section class="content-header">
-                <h1>Payment History</h1>
+                <h1>Semester Results (181011072)</h1>
             </section>
 
             <section class="content text-center">
-                <div class="row">
+
+
+                <div id="semesterResult">
+
+                </div>
+
+                <div class="row" id="studentResult">
                     <div class="col-md-12">
                         <div class="box box-primary">
                             <div class="box-body box-profile">
 
-                                <table class="table row-border stripe compact  dataTable student_payment">
+                                <table class="table table-bordered compact dataTable student_payment table-striped">
                                     <thead>
-                                        <tr>
-                                            <td>Invoice ID</td>
-                                            <td>Exam Session</td>
+                                        <tr class="vubg">
                                             <td>Semester</td>
-                                            <td>Amount/Installments</td>
-                                            <td>Paid</td>
-                                            <td>Due</td>
-                                            <td>Download</td>
+                                            <td>Total Credit</td>
+                                            <td>Earned Credit</td>
+                                            <td>GPA</td>
+                                            <td>Grade</td>
+                                            <td>View Transcript</td>
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <tr>
-                                            <td>39645</td>
-                                            <td>Spring-2018</td>
                                             <td>1st</td>
-                                            <td><span class="label label-success">14000</span><span
-                                                    class="label label-success">2850</span></td>
-                                            <td>16850</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>2.92</td>
+                                            <td>B-</td>
+                                            <td><a href="#" onclick="show_transcript('1st')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>45536</td>
-                                            <td>Summer-2018</td>
                                             <td>2nd</td>
-                                            <td><span class="label label-success">8850</span><span
-                                                    class="label label-success">8500</span></td>
-                                            <td>17350</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>2.75</td>
+                                            <td>B-</td>
+                                            <td><a href="#" onclick="show_transcript('2nd')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>49187</td>
-                                            <td>Fall-2018</td>
                                             <td>3rd</td>
-                                            <td><span class="label label-success">8850</span><span
-                                                    class="label label-success">8500</span></td>
-                                            <td>17350</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>2.10</td>
+                                            <td>D</td>
+                                            <td><a href="#" onclick="show_transcript('3rd')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>54828</td>
-                                            <td>Spring-2019</td>
                                             <td>4th</td>
-                                            <td><span class="label label-success">8100</span><span
-                                                    class="label label-success">7500</span></td>
-                                            <td>15600</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>8</td>
+                                            <td>8</td>
+                                            <td>3.28</td>
+                                            <td>B+</td>
+                                            <td><a href="#" onclick="show_transcript('4th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>58774</td>
-                                            <td>Summer-2019</td>
                                             <td>5th</td>
-                                            <td><span class="label label-success">8850</span><span
-                                                    class="label label-success">8000</span></td>
-                                            <td>16850</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>2.92</td>
+                                            <td>B-</td>
+                                            <td><a href="#" onclick="show_transcript('5th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>62787</td>
-                                            <td>Fall-2019</td>
                                             <td>6th</td>
-                                            <td><span class="label label-success">9932</span><span
-                                                    class="label label-success">9168</span></td>
-                                            <td>19100</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>3.03</td>
+                                            <td>B</td>
+                                            <td><a href="#" onclick="show_transcript('6th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>65161</td>
-                                            <td>Spring-2020</td>
                                             <td>7th</td>
-                                            <td><span class="label label-success">9282</span><span
-                                                    class="label label-success">8568</span></td>
-                                            <td>17850</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>9</td>
+                                            <td>9</td>
+                                            <td>2.92</td>
+                                            <td>B-</td>
+                                            <td><a href="#" onclick="show_transcript('7th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>69067</td>
-                                            <td>Summer-2020</td>
                                             <td>8th</td>
-                                            <td><span class="label label-success">10192</span><span
-                                                    class="label label-success">9408</span></td>
-                                            <td>19600</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>2.56</td>
+                                            <td>C+</td>
+                                            <td><a href="#" onclick="show_transcript('8th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>76639</td>
-                                            <td>Fall-2020</td>
                                             <td>9th</td>
-                                            <td><span class="label label-success">10842</span><span
-                                                    class="label label-success">10008</span></td>
-                                            <td>20850</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td>2.38</td>
+                                            <td>C</td>
+                                            <td><a href="#" onclick="show_transcript('9th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>85335</td>
-                                            <td>Spring-2022</td>
                                             <td>10th</td>
-                                            <td><span class="label label-success">11284</span><span
-                                                    class="label label-success">10416</span></td>
-                                            <td>21700</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>2.75</td>
+                                            <td>B-</td>
+                                            <td><a href="#" onclick="show_transcript('10th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>85845</td>
-                                            <td>Spring-2024</td>
                                             <td>11th</td>
-                                            <td><span class="label label-success">23200</span></td>
-                                            <td>20700</td>
-                                            <td>0</td>
-                                            <td>download</td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td>2.69</td>
+                                            <td>C+</td>
+                                            <td><a href="#" onclick="show_transcript('10th')">View Transcript</a></td>
                                         </tr>
                                         <tr>
-                                            <td>23436</td>
-                                            <td>Fall-2024</td>
                                             <td>12th</td>
-                                            <td><span class="label label-danger">10864</span><span
-                                                    class="label label-danger">10888</span></td>
-                                            <td>0</td>
-                                            <td>21752</td>
-                                            <td>download</td>
+                                            <td>12</td>
+                                            <td colspan="4" style="color:red !important; text-align:center">Payment
+                                                Pending</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -304,6 +287,28 @@
                 </div>
             </section>
         </div>
+
+
+        <script>
+            function show_transcript(semester) {
+                var base_url = "http://202.5.52.152:8081/";
+                var student = "181011072";
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "student/show_semester_transcript/" + student + "/" + semester,
+                    success: function (result) {
+                        $("#semesterResult").html("");
+                        $("#semesterResult").append(result).hide().slideDown(1000);
+                        // $("#studentResult").slideDown();
+
+                    }
+                });
+            }
+        </script>
+
+
+
+
 
         <!-- /.content-wrapper -->
 
