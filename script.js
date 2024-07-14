@@ -1,8 +1,7 @@
 document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
+  .getElementById("sign-in-btn")
+  .addEventListener("click", function (event) {
     event.preventDefault();
-
     // Read input values
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
