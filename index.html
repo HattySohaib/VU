@@ -13,7 +13,7 @@
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <script defer src="/script.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 
 <body class="hold-transition login-page">
@@ -25,7 +25,7 @@
         <div class="login-box-body">
             <p class="login-box-msg">Sign in to start your session</p>
 
-            <div id="loginForm">
+            <form id="loginForm">
                 <div class="form-group has-feedback">
                     <input id="username" name="student_id" type="text" class="form-control" placeholder="Student Id">
                 </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button name="submit" id="sign-in-btn" class="btn btn-primary btn-block btn-flat">Sign
+                        <button name="submit" type="submit" class="btn btn-primary btn-block btn-flat">Sign
                             In</button>
                     </div>
                     <!-- /.col -->
@@ -46,7 +46,7 @@
                     </div>
                     <!-- /.col -->
                 </div>
-            </div>
+            </form>
 
         </div>
         <!-- /.login-box-body -->
